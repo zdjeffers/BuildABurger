@@ -1,0 +1,35 @@
+<h1><img id="logo" src="/assets/images/images.png" alt="logo" />This is a Tasty Burger!<img id="logo"
+    src="/assets/images/images.png" alt="logo" /></h1>
+
+  <h2 id="buildburger">Build a Burger</h2>
+  <form id="create-form">
+
+    <div class="form-group">
+      <label for="ca">Burger Name:</label>
+      <input type="text" id="ca" name="name">
+    </div>
+
+    <button id="add-button" type="submit"> Add Burger </button>
+  </form>
+
+
+  <h2>Burgers you devoured:</h2>
+
+
+  <ol>
+    {{#each burgers}}
+    {{#unless devoured}}
+    {{> burgers/burger-block devoured=true}}
+    {{/unless}}
+    {{/each}}
+  </ol>
+
+  <h2 id="you-did-not">Are you not hungry? Not Devoured:</h2>
+  <ol id="devour-ul">
+    <div class="">
+      {{#each burgers}}
+      {{#if devoured}}
+      {{> burgers/burger-block devoured=false}}
+      {{/if}}
+      {{/each}}
+  </ol>
