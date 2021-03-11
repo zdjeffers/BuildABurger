@@ -1,0 +1,103 @@
+body {
+    background-color: #f7f7f7;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    width: 12rem;
+}
+
+h1 {
+    font-family: 'Fascinate', cursive;
+    font-size: 3.75rem;
+    margin-bottom: 2.5rem;
+}
+
+h2 {
+    font-family: 'Fascinate', cursive;
+    font-size: 2.25rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.container {
+    font-family: 'Montserrat', sans-serif;
+    width: 90%;
+}
+
+#add-button {
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Montserrat', sans-serif;
+    display: block;
+    letter-spacing: 1px;
+    border: 2px solid rgb(0, 0, 0);
+    background: whitesmoke;
+    color: rgb(0, 0, 0);
+    border-radius: 40px;
+    position: relative;
+    text-align: center;
+}
+
+#devour-button {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+    border: 2px solid rgb(0, 0, 0);
+    background: whitesmoke;
+    color: rgb(0, 0, 0);
+    border-radius: 40px;
+    text-align: center;
+}
+
+#delete-button {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+    border: 2px solid rgb(0, 0, 0);
+    background: whitesmoke;
+    color: rgb(0, 0, 0);
+    border-radius: 40px;
+    text-align: center;
+}
+
+.available-burgers {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+#available-burger-list {
+    padding: 2%;
+    border: 3px solid black;
+}
+
+.devoured-burgers {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+#devoured-burger-list {
+    padding: 2%;
+    border: 3px solid black;
+}
+
+#enter-burger {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3rem;
+    border: 3px solid black;
+}
+
+input {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    background: whitesmoke;
+}
