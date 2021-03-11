@@ -12,8 +12,7 @@ else {
     host: 'localhost',
     port: 3306,
     user: 'root',
-    // NOTE: Be sure to add your MySQL password here!
-    password: process.env.DB_Password,
+    password: "coding",
     database: 'burgers_db',
   });
 }

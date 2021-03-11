@@ -1,35 +1,48 @@
-<h1><img id="logo" src="/assets/images/images.png" alt="logo" />This is a Tasty Burger!<img id="logo"
-    src="/assets/images/images.png" alt="logo" /></h1>
+<img src="https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/77420/burger-clipart-xl.png"
+    alt="burger-clipart">
 
-  <h2 id="buildburger">Build a Burger</h2>
-  <form id="create-form">
+<h1 class="title text-center">This is a Tasty Burger!</h1>
 
-    <div class="form-group">
-      <label for="ca">Burger Name:</label>
-      <input type="text" id="ca" name="name">
+<div class="container">
+    <div class="row">
+        <div class="col-5" id="available-burger-list">
+            <h2>Available Burgers</h2>
+            <ul>
+                {{#each burgers}}
+                {{#unless devoured}}
+                <div class="available-burgers">
+                    <span> {{this.burger_name}} </span>
+                    <button type="button" class="btn btn-light" id="devour-button" data-id="{{this.id}}"
+                        data-newDevoured="{{devour}}">DEVOUR IT</button>
+                </div>
+                {{/unless}}
+                {{/each}}
+            </ul>
+        </div>
+
+        <div class="col"></div>
+
+        <div class="col-5" id="devoured-burger-list">
+            <h2>Devoured Burgers</h2>
+            <ul>
+                {{#each burgers}}
+                {{#if devoured}}
+                <div class="devoured-burgers">
+                    <span> {{this.burger_name}} </span>
+                    <button type="button" class="btn btn-light" id="delete-button" data-id="{{this.id}}"
+                        data-newDevoured="{{devour}}">I'M FULL!</button>
+                </div>
+                {{/if}}
+                {{/each}}
+            </ul>
+        </div>
     </div>
+</div>
 
-    <button id="add-button" type="submit"> Add Burger </button>
-  </form>
-
-
-  <h2>Burgers you devoured:</h2>
-
-
-  <ol>
-    {{#each burgers}}
-    {{#unless devoured}}
-    {{> burgers/burger-block devoured=true}}
-    {{/unless}}
-    {{/each}}
-  </ol>
-
-  <h2 id="you-did-not">Are you not hungry? Not Devoured:</h2>
-  <ol id="devour-ul">
-    <div class="">
-      {{#each burgers}}
-      {{#if devoured}}
-      {{> burgers/burger-block devoured=false}}
-      {{/if}}
-      {{/each}}
-  </ol>
+{{!-- Button to add new burger --}}
+<form class="create-form" id="add-burger">
+    <div class="form-group col">
+        <input type="text" id="enter-burger" name="burger_name">
+        <button type="submit" class="btn btn-light" id="add-button">ADD BURGER</button>
+    </div>
+</form>
