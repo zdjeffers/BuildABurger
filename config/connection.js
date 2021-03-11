@@ -13,7 +13,7 @@ else {
     port: 3306,
     user: 'root',
     // NOTE: Be sure to add your MySQL password here!
-    password: 'coding',
+    password: process.env.DB_Password,
     database: 'burgers_db',
   });
 }
