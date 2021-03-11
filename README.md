@@ -5,7 +5,7 @@ Create a online burger joint, allowing you to create your own burger, eat the bu
 This application utilizes Node.js and handlebars to create a webpage allowing you to create a burger, eat a burger, and then delete it from the list. This is the first development I've done using ORM, including setting up the config files, main and index handlebar pages, as well as adding in controlling elements.
 
 ### Here is the final product:
-![Build a Burger](https://github.com/zdjeffers/Employee_tracking/blob/main/Instructions/Assets/Tracker-Demo.gif)
+![Build a Burger](https://github.com/zdjeffers/BuildABurger/blob/main/public/assets/img/Screenshot%202021-03-10%20223807.png)
 
 
 
